@@ -49,7 +49,7 @@ public class Arbitrage {
 	public void relax( Edge e,Queue<Integer> q){
 		int v = e.from();
 		int w = e.to();
-		if(dist[v] != Double.MAX_VALUE && distTo[w] > distTo[v] + e.weight()){
+		if(distTo[v] != Double.MAX_VALUE && distTo[w] > distTo[v] + e.weight()){
 			q.enqueue(w);
 			distTo[w] = distTo[v] + e.weight();
 			edgeTo[w] = e;
